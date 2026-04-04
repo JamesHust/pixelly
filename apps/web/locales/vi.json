@@ -1,0 +1,103 @@
+{
+  "auth": {
+    "login": {
+      "title": "Chào mừng trở lại",
+      "subtitle": "Đăng nhập vào tài khoản Pixelly của bạn",
+      "email": "Email",
+      "emailPlaceholder": "ban@example.com",
+      "password": "Mật khẩu",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Đăng nhập",
+      "submitting": "Đang đăng nhập…",
+      "noAccount": "Chưa có tài khoản?",
+      "createAccount": "Tạo ngay"
+    },
+    "register": {
+      "title": "Tạo tài khoản",
+      "subtitle": "Tham gia Pixelly và bắt đầu thiết kế",
+      "name": "Họ tên",
+      "namePlaceholder": "Tên của bạn",
+      "email": "Email",
+      "emailPlaceholder": "ban@example.com",
+      "password": "Mật khẩu",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Tạo tài khoản",
+      "submitting": "Đang tạo tài khoản…",
+      "hasAccount": "Đã có tài khoản?",
+      "signIn": "Đăng nhập"
+    },
+    "errors": {
+      "loginFailed": "Đăng nhập thất bại. Vui lòng kiểm tra thông tin và thử lại.",
+      "registerFailed": "Đăng ký thất bại. Vui lòng thử lại."
+    }
+  },
+  "dashboard": {
+    "title": "Bảng điều khiển",
+    "newProject": "Dự án mới",
+    "noProjects": "Chưa có dự án nào",
+    "noProjectsHint": "Tạo dự án đầu tiên để bắt đầu.",
+    "untitled": "Chưa đặt tên",
+    "lastEdited": "Chỉnh sửa lần cuối {date}"
+  },
+  "editor": {
+    "toolbar": {
+      "select": "Chọn",
+      "rectangle": "Hình chữ nhật",
+      "circle": "Hình tròn",
+      "text": "Văn bản",
+      "image": "Hình ảnh",
+      "hand": "Di chuyển"
+    },
+    "panels": {
+      "layers": "Lớp",
+      "properties": "Thuộc tính",
+      "ai": "Trợ lý AI"
+    },
+    "actions": {
+      "undo": "Hoàn tác",
+      "redo": "Làm lại",
+      "delete": "Xóa",
+      "duplicate": "Nhân bản",
+      "group": "Nhóm",
+      "ungroup": "Bỏ nhóm",
+      "bringForward": "Đưa lên trước",
+      "sendBackward": "Đưa ra sau"
+    }
+  },
+  "common": {
+    "save": "Lưu",
+    "cancel": "Hủy",
+    "delete": "Xóa",
+    "edit": "Chỉnh sửa",
+    "rename": "Đổi tên",
+    "duplicate": "Nhân bản",
+    "loading": "Đang tải…",
+    "error": "Có lỗi xảy ra",
+    "success": "Thành công",
+    "confirm": "Xác nhận",
+    "close": "Đóng",
+    "back": "Quay lại",
+    "next": "Tiếp theo",
+    "search": "Tìm kiếm"
+  },
+  "nav": {
+    "dashboard": "Bảng điều khiển",
+    "settings": "Cài đặt",
+    "logout": "Đăng xuất",
+    "profile": "Hồ sơ"
+  },
+  "theme": {
+    "toggle": "Đổi giao diện",
+    "light": "Sáng",
+    "dark": "Tối",
+    "system": "Hệ thống"
+  },
+  "locale": {
+    "toggle": "Ngôn ngữ",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "zh": "中文",
+    "id": "Bahasa Indonesia"
+  }
+}

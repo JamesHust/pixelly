@@ -1,0 +1,1 @@
+- [Pixelly Project Overview](project_pixelly.md) — Stack, paths, dev commands, architecture notes for the Pixelly design tool

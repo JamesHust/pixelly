@@ -1,0 +1,103 @@
+{
+  "auth": {
+    "login": {
+      "title": "Selamat datang kembali",
+      "subtitle": "Masuk ke akun Pixelly Anda",
+      "email": "Email",
+      "emailPlaceholder": "anda@example.com",
+      "password": "Kata sandi",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Masuk",
+      "submitting": "Sedang masuk…",
+      "noAccount": "Belum punya akun?",
+      "createAccount": "Buat sekarang"
+    },
+    "register": {
+      "title": "Buat akun",
+      "subtitle": "Bergabung dengan Pixelly dan mulai mendesain",
+      "name": "Nama",
+      "namePlaceholder": "Nama Anda",
+      "email": "Email",
+      "emailPlaceholder": "anda@example.com",
+      "password": "Kata sandi",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Buat akun",
+      "submitting": "Membuat akun…",
+      "hasAccount": "Sudah punya akun?",
+      "signIn": "Masuk"
+    },
+    "errors": {
+      "loginFailed": "Masuk gagal. Periksa kredensial Anda dan coba lagi.",
+      "registerFailed": "Pendaftaran gagal. Silakan coba lagi."
+    }
+  },
+  "dashboard": {
+    "title": "Dasbor",
+    "newProject": "Proyek baru",
+    "noProjects": "Belum ada proyek",
+    "noProjectsHint": "Buat proyek pertama Anda untuk memulai.",
+    "untitled": "Tanpa judul",
+    "lastEdited": "Terakhir diedit {date}"
+  },
+  "editor": {
+    "toolbar": {
+      "select": "Pilih",
+      "rectangle": "Persegi panjang",
+      "circle": "Lingkaran",
+      "text": "Teks",
+      "image": "Gambar",
+      "hand": "Geser"
+    },
+    "panels": {
+      "layers": "Layer",
+      "properties": "Properti",
+      "ai": "Asisten AI"
+    },
+    "actions": {
+      "undo": "Batalkan",
+      "redo": "Ulangi",
+      "delete": "Hapus",
+      "duplicate": "Duplikat",
+      "group": "Grup",
+      "ungroup": "Batalkan grup",
+      "bringForward": "Bawa ke depan",
+      "sendBackward": "Kirim ke belakang"
+    }
+  },
+  "common": {
+    "save": "Simpan",
+    "cancel": "Batal",
+    "delete": "Hapus",
+    "edit": "Edit",
+    "rename": "Ganti nama",
+    "duplicate": "Duplikat",
+    "loading": "Memuat…",
+    "error": "Terjadi kesalahan",
+    "success": "Selesai",
+    "confirm": "Konfirmasi",
+    "close": "Tutup",
+    "back": "Kembali",
+    "next": "Berikutnya",
+    "search": "Cari"
+  },
+  "nav": {
+    "dashboard": "Dasbor",
+    "settings": "Pengaturan",
+    "logout": "Keluar",
+    "profile": "Profil"
+  },
+  "theme": {
+    "toggle": "Ganti tema",
+    "light": "Terang",
+    "dark": "Gelap",
+    "system": "Sistem"
+  },
+  "locale": {
+    "toggle": "Bahasa",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "zh": "中文",
+    "id": "Bahasa Indonesia"
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Sign in to your Pixelly account",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "noAccount": "No account?",
+      "createAccount": "Create one"
+    },
+    "register": {
+      "title": "Create account",
+      "subtitle": "Join Pixelly and start designing",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "password": "Password",
+      "passwordPlaceholder": "••••••••",
+      "submit": "Create account",
+      "submitting": "Creating account…",
+      "hasAccount": "Already have an account?",
+      "signIn": "Sign in"
+    },
+    "errors": {
+      "loginFailed": "Login failed. Check your credentials and try again.",
+      "registerFailed": "Registration failed. Please try again."
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "newProject": "New project",
+    "noProjects": "No projects yet",
+    "noProjectsHint": "Create your first project to get started.",
+    "untitled": "Untitled",
+    "lastEdited": "Last edited {date}"
+  },
+  "editor": {
+    "toolbar": {
+      "select": "Select",
+      "rectangle": "Rectangle",
+      "circle": "Circle",
+      "text": "Text",
+      "image": "Image",
+      "hand": "Hand"
+    },
+    "panels": {
+      "layers": "Layers",
+      "properties": "Properties",
+      "ai": "AI Assistant"
+    },
+    "actions": {
+      "undo": "Undo",
+      "redo": "Redo",
+      "delete": "Delete",
+      "duplicate": "Duplicate",
+      "group": "Group",
+      "ungroup": "Ungroup",
+      "bringForward": "Bring forward",
+      "sendBackward": "Send backward"
+    }
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "rename": "Rename",
+    "duplicate": "Duplicate",
+    "loading": "Loading…",
+    "error": "Something went wrong",
+    "success": "Done",
+    "confirm": "Confirm",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "search": "Search"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "settings": "Settings",
+    "logout": "Log out",
+    "profile": "Profile"
+  },
+  "theme": {
+    "toggle": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "locale": {
+    "toggle": "Language",
+    "en": "English",
+    "vi": "Tiếng Việt",
+    "ja": "日本語",
+    "zh": "中文",
+    "id": "Bahasa Indonesia"
+  }
+}
