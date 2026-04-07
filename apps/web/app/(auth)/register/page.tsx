@@ -20,8 +20,8 @@ export default function RegisterPage() {
       const data = await api.auth.register(form)
       localStorage.setItem('pixelly_token', data.token)
       router.push('/dashboard')
-    } catch (err: any) {
-      setError(err.message || 'Registration failed')
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Registration failed')
     } finally {
       setLoading(false)
     }

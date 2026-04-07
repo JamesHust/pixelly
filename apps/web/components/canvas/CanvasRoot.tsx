@@ -253,8 +253,8 @@ export function CanvasRoot({ projectId, readOnly = false }: Props) {
           case 'ellipse': newObj = { ...createEllipse(x, y, parentId), width, height }; break
           case 'text':    newObj = { ...createText(x, y, parentId), width, height }; break
           case 'frame':   newObj = { ...createFrame(x, y, parentId), width, height }; break
-          case 'polygon': newObj = { ...createPolygon(x, y, parentId), width, height }; break
-          case 'star':    newObj = { ...createStar(x, y, parentId), width, height }; break
+          case 'polygon': newObj = { ...createPolygon(x, y, 6, 60, parentId), width, height }; break
+          case 'star':    newObj = { ...createStar(x, y, 5, 60, 0.45, parentId), width, height }; break
           // Line/Arrow: store signed deltas directly (dx/dy, not normalised)
           case 'line':    newObj = createLine(drawing.startX, drawing.startY, dx, dy, parentId); break
           case 'arrow':   newObj = createArrow(drawing.startX, drawing.startY, dx, dy, parentId); break
@@ -266,8 +266,8 @@ export function CanvasRoot({ projectId, readOnly = false }: Props) {
           case 'ellipse': newObj = createEllipse(drawing.startX, drawing.startY, parentId); break
           case 'text':    newObj = createText(drawing.startX, drawing.startY, parentId);    break
           case 'frame':   newObj = createFrame(drawing.startX, drawing.startY, parentId);   break
-          case 'polygon': newObj = createPolygon(drawing.startX, drawing.startY, parentId); break
-          case 'star':    newObj = createStar(drawing.startX, drawing.startY, parentId);    break
+          case 'polygon': newObj = createPolygon(drawing.startX, drawing.startY, 6, 60, parentId);          break
+          case 'star':    newObj = createStar(drawing.startX, drawing.startY, 5, 60, 0.45, parentId);    break
           case 'line':    newObj = createLine(drawing.startX, drawing.startY, 150, 0, parentId);  break
           case 'arrow':   newObj = createArrow(drawing.startX, drawing.startY, 150, 0, parentId); break
         }

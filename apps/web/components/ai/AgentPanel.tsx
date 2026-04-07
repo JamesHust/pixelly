@@ -16,6 +16,7 @@ import {
   ToggleRight,
 } from 'lucide-react'
 import { createRect, createText, createEllipse, createFrame } from '@/lib/canvas/shapes'
+import type { CanvasObject } from '@/types/canvas'
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 
@@ -53,29 +54,31 @@ function normalizeSkillRepo(input: string): string | null {
 
 // Apply AI-generated canvas objects onto the canvas.
 function applyCanvasObjects(
-  objects: any[],
-  upsertObject: ReturnType<typeof useCanvasStore>['upsertObject']
+  objects: Record<string, unknown>[],
+  upsertObject: (obj: CanvasObject) => void
 ) {
   for (const item of objects) {
-    const x = item.x ?? 100
-    const y = item.y ?? 100
+    const x = Number(item.x) || 100
+    const y = Number(item.y) || 100
     switch (item.type) {
-      case 'rect':
-        upsertObject({ ...createRect(x, y), ...item, id: undefined, ...{ id: createRect(x, y).id } })
+      case 'rect': {
+        const base = createRect(x, y)
+        upsertObject({ ...base, ...item, id: base.id } as CanvasObject)
         break
+      }
       case 'text': {
         const base = createText(x, y)
-        upsertObject({ ...base, ...item, id: base.id })
+        upsertObject({ ...base, ...item, id: base.id } as CanvasObject)
         break
       }
       case 'ellipse': {
         const base = createEllipse(x, y)
-        upsertObject({ ...base, ...item, id: base.id })
+        upsertObject({ ...base, ...item, id: base.id } as CanvasObject)
         break
       }
       case 'frame': {
         const base = createFrame(x, y)
-        upsertObject({ ...base, ...item, id: base.id })
+        upsertObject({ ...base, ...item, id: base.id } as CanvasObject)
         break
       }
     }
@@ -243,8 +246,8 @@ export function AgentPanel() {
       } catch {
         // Not JSON — text-only response, that's fine
       }
-    } catch (err: any) {
-      if (err.name !== 'AbortError') {
+    } catch (err) {
+      if (err instanceof Error && err.name !== 'AbortError') {
         updateLastAssistantMessage(
           'Error connecting to AI. Make sure Ollama is running locally.'
         )

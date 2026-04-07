@@ -62,7 +62,7 @@ export function AIPanel() {
         if (match) {
           const parsed = JSON.parse(match[0])
           if (Array.isArray(parsed)) {
-            parsed.forEach((item: any) => {
+            parsed.forEach((item: { type?: string; x?: number; y?: number; text?: string }) => {
               if (item.type === 'rect') {
                 upsertObject(createRect(item.x ?? 100, item.y ?? 100))
               } else if (item.type === 'text') {
@@ -75,8 +75,8 @@ export function AIPanel() {
       } catch {
         // Not JSON, that's fine — just show the text response
       }
-    } catch (err: any) {
-      if (err.name !== 'AbortError') {
+    } catch (err) {
+      if (err instanceof Error && err.name !== 'AbortError') {
         setResponse('Error connecting to AI. Make sure Ollama is running locally.')
       }
     } finally {

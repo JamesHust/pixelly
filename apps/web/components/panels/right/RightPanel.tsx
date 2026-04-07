@@ -89,12 +89,12 @@ export function RightPanel() {
               <div className="flex items-center gap-2">
                 <input
                   type="color"
-                  value={(selected as any).fill || '#000000'}
+                  value={(selected as { fill?: string }).fill || '#000000'}
                   onChange={(e) => upsertObject({ ...selected, fill: e.target.value } as CanvasObject)}
                   className="w-8 h-7 rounded cursor-pointer border border-border bg-transparent"
                 />
                 <input
-                  value={(selected as any).fill || ''}
+                  value={(selected as { fill?: string }).fill || ''}
                   onChange={(e) => upsertObject({ ...selected, fill: e.target.value } as CanvasObject)}
                   className="flex-1 bg-background border border-border rounded px-2 py-1 text-xs text-foreground focus:outline-none focus:border-ring"
                 />

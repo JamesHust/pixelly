@@ -98,7 +98,10 @@ type ollamaChunk struct {
 }
 
 func (s *AIService) streamOllama(ctx context.Context, messages []ChatMessage, model string, w *bufio.Writer) error {
-	body, _ := json.Marshal(ollamaChatRequest{Model: model, Messages: messages, Stream: true})
+	body, err := json.Marshal(ollamaChatRequest{Model: model, Messages: messages, Stream: true})
+	if err != nil {
+		return fmt.Errorf("marshal request: %w", err)
+	}
 
 	httpReq, err := http.NewRequestWithContext(ctx, "POST", s.baseURL+"/api/chat", bytes.NewReader(body))
 	if err != nil {
@@ -115,7 +118,10 @@ func (s *AIService) streamOllama(ctx context.Context, messages []ChatMessage, mo
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		b, _ := io.ReadAll(resp.Body)
+		b, readErr := io.ReadAll(resp.Body)
+		if readErr != nil {
+			b = nil
+		}
 		msg := strings.TrimSpace(string(b))
 		if msg == "" {
 			msg = fmt.Sprintf("HTTP %d", resp.StatusCode)
@@ -166,7 +172,10 @@ type openAIChunk struct {
 }
 
 func (s *AIService) streamOpenAI(ctx context.Context, messages []ChatMessage, model string, w *bufio.Writer) error {
-	body, _ := json.Marshal(openAIRequest{Model: model, Messages: messages, Stream: true})
+	body, err := json.Marshal(openAIRequest{Model: model, Messages: messages, Stream: true})
+	if err != nil {
+		return fmt.Errorf("marshal request: %w", err)
+	}
 
 	httpReq, err := http.NewRequestWithContext(ctx, "POST", s.baseURL+"/chat/completions", bytes.NewReader(body))
 	if err != nil {
@@ -186,7 +195,10 @@ func (s *AIService) streamOpenAI(ctx context.Context, messages []ChatMessage, mo
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		b, _ := io.ReadAll(resp.Body)
+		b, readErr := io.ReadAll(resp.Body)
+		if readErr != nil {
+			b = nil
+		}
 		msg := strings.TrimSpace(string(b))
 		if msg == "" {
 			msg = fmt.Sprintf("HTTP %d", resp.StatusCode)
